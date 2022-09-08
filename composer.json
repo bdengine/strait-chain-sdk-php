@@ -1,0 +1,23 @@
+{
+  "require": {
+    "alibabacloud/sdk": "^1.8",
+    "web3p/web3.php": "^0.1.6",
+    "web3p/ethereum-tx": "^0.4.3",
+    "ext-json": "*",
+    "ext-curl": "*",
+    "chesterlyd/ethereum-client": "^1.0",
+    "ext-openssl": "*",
+    "bitwasp/bitcoin": "^1.0"
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://mirrors.aliyun.com/composer/"
+    }
+  },
+  "config": {
+    "platform": {
+      "php": "7.4.3"
+    }
+  }
+}
