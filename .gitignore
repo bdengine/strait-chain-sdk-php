@@ -44,3 +44,8 @@ nbdist/
 
 # Jreble
 rebel.xml
+.idea/modules.xml
+.idea/modules.xml
+.idea/php.xml
+.idea/straits-chain-sdk-php.iml
+.idea/vcs.xml
