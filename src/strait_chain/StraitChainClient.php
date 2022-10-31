@@ -51,7 +51,7 @@ class StraitChainClient
 	public function http_post_json($param)
 	{
 		$jsonStr = json_encode($param,JSON_PRETTY_PRINT);
-		printf($jsonStr);
+		var_dump($jsonStr);
 		$ch = curl_init();
 		curl_setopt($ch,CURLOPT_FOLLOWLOCATION,1);
 
@@ -63,7 +63,7 @@ class StraitChainClient
 		curl_setopt($ch, CURLOPT_POST, 1);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonStr);
 		$result = curl_exec($ch);
-		printf($result);
+		var_dump($result);
 		return $result;
 	}
 
@@ -97,12 +97,11 @@ class StraitChainClient
 	 * 返回合约
 	 * @return Contract 合约实体类
 	 */
-	public function getContract(){
+	public function getContract($abi){
 		$url = 'https://kovan.infura.io/v3/8f762549c8c341388ac03552835a0358';
 		// 为了拿到合约方法的编码
 		$web3 = new Web3(new HttpProvider(new HttpRequestManager($url, 5)));
-		return new Contract($web3->getProvider(), $this->testAbi);
-
+		return new Contract($web3->getProvider(), $abi);
 	}
 
 	public function scs_sendRawTransaction($txParams)
@@ -324,7 +323,7 @@ class StraitChainClient
 	 */
 	public function transferNft($param)
 	{
-		$contract = $this->getContract();
+		$contract = $this->getContract($this->testAbi);
 		// 得到合约编码
 		$data = $contract->getData('transferFrom', $param['fromAddress'], $param['toAddress'], $param['tokenId']);
 		// value 写死，chainId写死
@@ -392,7 +391,7 @@ class StraitChainClient
 
 	public function ownerOf($param)
 	{
-		$contract = $this->getContract();
+		$contract = $this->getContract($this->testAbi);
 		// 得到合约编码
 		$data = $contract->getData('ownerOf', $param['tokenId']);
 
@@ -407,7 +406,7 @@ class StraitChainClient
 	public function contract4907setUser($param)
 	{
 
-		$contract = $this->getContract();
+		$contract = $this->getContract($this->testAbi);
 		// 得到合约编码
 		$data = $contract->getData('setUser', $param['tokenId'], $param['toAddress'], $param['expires']);
 		// value 写死，chainId写死
@@ -434,7 +433,7 @@ class StraitChainClient
 	 */
 	public function contract4907userOf($param)
 	{
-		$contract = $this->getContract();
+		$contract = $this->getContract($this->testAbi);
 		// 得到合约编码
 		$data = $contract->getData('userOf', $param['tokenId']);
 		$response = $this->scs_call($this->fromAddress, $param['contractAddress'],$data);
@@ -451,7 +450,7 @@ class StraitChainClient
 	 */
 	public function contract4907userExpires($param)
 	{
-		$contract = $this->getContract();
+		$contract = $this->getContract($this->testAbi);
 		// 得到合约编码
 		$data = $contract->getData('userExpires', $param['tokenId']);
 		$response = $this->scs_call($this->fromAddress, $param['contractAddress'],$data);
@@ -459,6 +458,72 @@ class StraitChainClient
 		return hexdec($response->result);
 	}
 
+	/**
+	 * 数字存证
+	 * version 2.1.0
+	 * @param $mintParam
+	 * @return mixed 交易哈希
+	 */
+	public function scsDigitalCollectionMint($mintParam){
+		array_unshift($mintParam, $this->appId);
+		$str = $this->signByAppKey($mintParam);
+		$mintParam['sign'] = $str;
+		return $this->request("scs_digital_collection_mint", $mintParam, 1);
+	}
+
+	/**
+	 * 获取铸造结果
+	 * @param $txHash 铸造返回哈希
+	 * @return mixed 铸造结果，交易哈希相同
+	 */
+	public function scsDigitalCollectionList($txHash){
+		return $this->request("scs_digital_collection_list", [$txHash], 1);
+	}
+
+	public function scsGetEvidenceContractAddress()
+	{
+		$result = $this->request("scs_get_evidence_contract_address",[],1);
+		return $result->result;
+	}
+
+	public function dcEvidenceSignHex($param){
+		$contractAddress = $this->scsGetEvidenceContractAddress();
+
+		$contract = $this->getContract($this->digitalAbi);
+		// 得到合约编码
+		$data = $contract->getData('evidenceContentEvent', $param['cid'],$param['content']);
+		// value 写死，chainId写死
+		$txParams = [
+			'from' => $param['fromAddress'],
+			'value' => 0x0,
+			"nonce" => $this->scs_getTransactionCount(),
+			"gasPrice" => $this->scs_gasPrice(),
+			"gas" => $this->gasLimit,
+			"to" => $contractAddress,
+			"data" => '0x' . $data,
+			// 正式
+//			"chainId" => 20180818,
+			// 内网测试
+			"chainId" => 20220101,
+		];
+
+		$transaction = new Transaction($txParams);
+		return $transaction->sign($this->privateKey);
+	}
+
+	public function scsExistingEvidence($param){
+		array_unshift($param, $this->appId);
+		$str = $this->signByAppKey($param);
+		$param['sign'] = $str;
+		return $this->request("scs_existing_evidence",$param,1);
+	}
+
+	public function scsDigitalCollectionTransaction($param){
+		array_unshift($param, $this->appId);
+		$str = $this->signByAppKey($param);
+		$param['sign'] = $str;
+		return $this->request("scs_digital_collection_transaction",$param,1);
+	}
 
 	protected $testAbi =
 		'[
@@ -1327,6 +1392,78 @@ class StraitChainClient
     "stateMutability": "view",
     "type": "function"
   }
+]';
+
+	protected $digitalAbi='[
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "cid",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "content",
+				"type": "string"
+			}
+		],
+		"name": "evidenceContentEvent",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "cid",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "content",
+				"type": "string"
+			}
+		],
+		"name": "evidence",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "cid",
+				"type": "string"
+			}
+		],
+		"name": "getContentByCid",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "content",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "totalSupply",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
 ]';
 
 	/**
