@@ -19,7 +19,7 @@ return array(
     'Symfony\\Polyfill\\Ctype\\' => array($vendorDir . '/symfony/polyfill-ctype'),
     'Symfony\\Component\\Yaml\\' => array($vendorDir . '/symfony/yaml'),
     'Stringy\\' => array($vendorDir . '/danielstjules/stringy/src'),
-    'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-factory/src', $vendorDir . '/psr/http-message/src'),
+    'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src', $vendorDir . '/psr/http-factory/src'),
     'Psr\\Http\\Client\\' => array($vendorDir . '/psr/http-client/src'),
     'Mdanter\\Ecc\\' => array($vendorDir . '/mdanter/ecc/src'),
     'JmesPath\\' => array($vendorDir . '/mtdowling/jmespath.php/src'),

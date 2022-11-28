@@ -26,13 +26,13 @@
 
 namespace phpseclib\File;
 
+use DateTime;
+use DateTimeZone;
 use phpseclib\Crypt\Hash;
 use phpseclib\Crypt\Random;
 use phpseclib\Crypt\RSA;
 use phpseclib\File\ASN1\Element;
 use phpseclib\Math\BigInteger;
-use DateTime;
-use DateTimeZone;
 
 /**
  * Pure-PHP X.509 Parser
@@ -145,6 +145,7 @@ class X509
     var $AuthorityKeyIdentifier;
     var $CertificatePolicies;
     var $AuthorityInfoAccessSyntax;
+    var $SubjectInfoAccessSyntax;
     var $SubjectAltName;
     var $SubjectDirectoryAttributes;
     var $PrivateKeyUsagePeriod;
@@ -2163,7 +2164,11 @@ class X509
                 if (!$fsock) {
                     return false;
                 }
-                fputs($fsock, "GET $parts[path] HTTP/1.0\r\n");
+                $path = $parts['path'];
+                if (isset($parts['query'])) {
+                    $path.= '?' . $parts['query'];
+                }
+                fputs($fsock, "GET $path HTTP/1.0\r\n");
                 fputs($fsock, "Host: $parts[host]\r\n\r\n");
                 $line = fgets($fsock, 1024);
                 if (strlen($line) < 3) {

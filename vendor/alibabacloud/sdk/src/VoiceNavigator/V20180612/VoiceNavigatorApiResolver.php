@@ -31,6 +31,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ExportStatisticalData exportStatisticalData(array $options = [])
  * @method GenerateUploadUrl generateUploadUrl(array $options = [])
  * @method GetAsrConfig getAsrConfig(array $options = [])
+ * @method GetRealTimeConcurrency getRealTimeConcurrency(array $options = [])
  * @method ListChatbotInstances listChatbotInstances(array $options = [])
  * @method ListConversationDetails listConversationDetails(array $options = [])
  * @method ListConversations listConversations(array $options = [])
@@ -268,6 +269,8 @@ class DescribeNavigationConfig extends Rpc
 }
 
 /**
+ * @method string getNeedVoiceSliceRecording()
+ * @method $this withNeedVoiceSliceRecording($value)
  * @method string getConversationId()
  * @method $this withConversationId($value)
  * @method string getInstanceId()
@@ -759,6 +762,17 @@ class GetAsrConfig extends Rpc
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class GetRealTimeConcurrency extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getInstanceId()
@@ -965,6 +979,8 @@ class QueryConversations extends Rpc
 }
 
 /**
+ * @method string getVoiceSliceRecordingList()
+ * @method $this withVoiceSliceRecordingList($value)
  * @method string getConversationId()
  * @method $this withConversationId($value)
  * @method string getStartTime()

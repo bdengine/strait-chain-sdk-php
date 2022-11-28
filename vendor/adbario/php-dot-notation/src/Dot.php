@@ -8,11 +8,11 @@
  */
 namespace Adbar;
 
-use Countable;
 use ArrayAccess;
 use ArrayIterator;
-use JsonSerializable;
+use Countable;
 use IteratorAggregate;
+use JsonSerializable;
 
 /**
  * Dot
@@ -600,6 +600,7 @@ class Dot implements ArrayAccess, Countable, IteratorAggregate, JsonSerializable
      *
      * @return array
      */
+    #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
         return $this->items;

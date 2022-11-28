@@ -6,11 +6,18 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method CancelExecution cancelExecution(array $options = [])
+ * @method ChangeResourceGroup changeResourceGroup(array $options = [])
+ * @method ContinueDeployApplicationGroup continueDeployApplicationGroup(array $options = [])
+ * @method CreateApplication createApplication(array $options = [])
+ * @method CreateApplicationGroup createApplicationGroup(array $options = [])
+ * @method CreateOpsItem createOpsItem(array $options = [])
  * @method CreateParameter createParameter(array $options = [])
  * @method CreatePatchBaseline createPatchBaseline(array $options = [])
  * @method CreateSecretParameter createSecretParameter(array $options = [])
  * @method CreateStateConfiguration createStateConfiguration(array $options = [])
  * @method CreateTemplate createTemplate(array $options = [])
+ * @method DeleteApplication deleteApplication(array $options = [])
+ * @method DeleteApplicationGroup deleteApplicationGroup(array $options = [])
  * @method DeleteExecutions deleteExecutions(array $options = [])
  * @method DeleteParameter deleteParameter(array $options = [])
  * @method DeletePatchBaseline deletePatchBaseline(array $options = [])
@@ -18,10 +25,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteStateConfigurations deleteStateConfigurations(array $options = [])
  * @method DeleteTemplate deleteTemplate(array $options = [])
  * @method DeleteTemplates deleteTemplates(array $options = [])
+ * @method DeployApplicationGroup deployApplicationGroup(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
  * @method GenerateExecutionPolicy generateExecutionPolicy(array $options = [])
+ * @method GetApplication getApplication(array $options = [])
+ * @method GetApplicationGroup getApplicationGroup(array $options = [])
  * @method GetExecutionTemplate getExecutionTemplate(array $options = [])
  * @method GetInventorySchema getInventorySchema(array $options = [])
+ * @method GetOpsItem getOpsItem(array $options = [])
  * @method GetParameter getParameter(array $options = [])
  * @method GetParameters getParameters(array $options = [])
  * @method GetParametersByPath getParametersByPath(array $options = [])
@@ -32,13 +43,15 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetServiceSettings getServiceSettings(array $options = [])
  * @method GetTemplate getTemplate(array $options = [])
  * @method ListActions listActions(array $options = [])
+ * @method ListApplicationGroups listApplicationGroups(array $options = [])
+ * @method ListApplications listApplications(array $options = [])
  * @method ListExecutionLogs listExecutionLogs(array $options = [])
  * @method ListExecutionRiskyTasks listExecutionRiskyTasks(array $options = [])
  * @method ListExecutions listExecutions(array $options = [])
  * @method ListInstancePatches listInstancePatches(array $options = [])
  * @method ListInstancePatchStates listInstancePatchStates(array $options = [])
- * @method ListInstanceStateReports listInstanceStateReports(array $options = [])
  * @method ListInventoryEntries listInventoryEntries(array $options = [])
+ * @method ListOpsItems listOpsItems(array $options = [])
  * @method ListParameters listParameters(array $options = [])
  * @method ListParameterVersions listParameterVersions(array $options = [])
  * @method ListPatchBaselines listPatchBaselines(array $options = [])
@@ -60,8 +73,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method TagResources tagResources(array $options = [])
  * @method TriggerExecution triggerExecution(array $options = [])
  * @method UntagResources untagResources(array $options = [])
+ * @method UpdateApplication updateApplication(array $options = [])
+ * @method UpdateApplicationGroup updateApplicationGroup(array $options = [])
  * @method UpdateExecution updateExecution(array $options = [])
- * @method UpdateInstanceInformation updateInstanceInformation(array $options = [])
+ * @method UpdateOpsItem updateOpsItem(array $options = [])
  * @method UpdateParameter updateParameter(array $options = [])
  * @method UpdatePatchBaseline updatePatchBaseline(array $options = [])
  * @method UpdateSecretParameter updateSecretParameter(array $options = [])
@@ -83,6 +98,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'oos';
 }
 
 /**
@@ -90,6 +108,98 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withExecutionId($value)
  */
 class CancelExecution extends Rpc
+{
+}
+
+/**
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getNewResourceGroupId()
+ * @method $this withNewResourceGroupId($value)
+ */
+class ChangeResourceGroup extends Rpc
+{
+}
+
+/**
+ * @method string getDeployParameters()
+ * @method $this withDeployParameters($value)
+ * @method string getApplicationName()
+ * @method $this withApplicationName($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class ContinueDeployApplicationGroup extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getTags()
+ * @method $this withTags($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class CreateApplication extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getCmsGroupId()
+ * @method $this withCmsGroupId($value)
+ * @method string getDeployRegionId()
+ * @method $this withDeployRegionId($value)
+ * @method string getApplicationName()
+ * @method $this withApplicationName($value)
+ * @method string getImportTagValue()
+ * @method $this withImportTagValue($value)
+ * @method string getImportTagKey()
+ * @method $this withImportTagKey($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class CreateApplicationGroup extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getSource()
+ * @method $this withSource($value)
+ * @method string getTitle()
+ * @method $this withTitle($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getSeverity()
+ * @method $this withSeverity($value)
+ * @method string getSolutions()
+ * @method $this withSolutions($value)
+ * @method string getResources()
+ * @method $this withResources($value)
+ * @method string getPriority()
+ * @method $this withPriority($value)
+ * @method string getDedupString()
+ * @method $this withDedupString($value)
+ * @method string getTags()
+ * @method $this withTags($value)
+ * @method string getCategory()
+ * @method $this withCategory($value)
+ */
+class CreateOpsItem extends Rpc
 {
 }
 
@@ -104,6 +214,8 @@ class CancelExecution extends Rpc
  * @method $this withConstraints($value)
  * @method string getTags()
  * @method $this withTags($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getName()
  * @method $this withName($value)
  * @method string getValue()
@@ -138,6 +250,8 @@ class CreatePatchBaseline extends Rpc
  * @method $this withType($value)
  * @method string getConstraints()
  * @method $this withConstraints($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getValue()
  * @method $this withValue($value)
  * @method string getKeyId()
@@ -160,6 +274,8 @@ class CreateSecretParameter extends Rpc
  * @method $this withDescription($value)
  * @method string getTargets()
  * @method $this withTargets($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getTemplateVersion()
  * @method $this withTemplateVersion($value)
  * @method string getScheduleExpression()
@@ -182,12 +298,34 @@ class CreateStateConfiguration extends Rpc
  * @method $this withContent($value)
  * @method string getTags()
  * @method $this withTags($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getTemplateName()
  * @method $this withTemplateName($value)
  * @method string getVersionName()
  * @method $this withVersionName($value)
  */
 class CreateTemplate extends Rpc
+{
+}
+
+/**
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getForce()
+ * @method $this withForce($value)
+ */
+class DeleteApplication extends Rpc
+{
+}
+
+/**
+ * @method string getApplicationName()
+ * @method $this withApplicationName($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class DeleteApplicationGroup extends Rpc
 {
 }
 
@@ -254,6 +392,18 @@ class DeleteTemplates extends Rpc
 }
 
 /**
+ * @method string getDeployParameters()
+ * @method $this withDeployParameters($value)
+ * @method string getApplicationName()
+ * @method $this withApplicationName($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class DeployApplicationGroup extends Rpc
+{
+}
+
+/**
  * @method string getAcceptLanguage()
  * @method $this withAcceptLanguage($value)
  */
@@ -268,6 +418,24 @@ class DescribeRegions extends Rpc
  * @method $this withTemplateName($value)
  */
 class GenerateExecutionPolicy extends Rpc
+{
+}
+
+/**
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class GetApplication extends Rpc
+{
+}
+
+/**
+ * @method string getApplicationName()
+ * @method $this withApplicationName($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class GetApplicationGroup extends Rpc
 {
 }
 
@@ -294,6 +462,16 @@ class GetInventorySchema extends Rpc
 }
 
 /**
+ * @method string getOpsItemId()
+ * @method $this withOpsItemId($value)
+ */
+class GetOpsItem extends Rpc
+{
+}
+
+/**
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getParameterVersion()
  * @method $this withParameterVersion($value)
  * @method string getName()
@@ -398,6 +576,44 @@ class ListActions extends Rpc
 }
 
 /**
+ * @method string getResourceProduct()
+ * @method $this withResourceProduct($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getProduct()
+ * @method $this withProduct($value)
+ * @method string getDeployRegionId()
+ * @method $this withDeployRegionId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getApplicationName()
+ * @method $this withApplicationName($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class ListApplicationGroups extends Rpc
+{
+}
+
+/**
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getTags()
+ * @method $this withTags($value)
+ * @method string getNames()
+ * @method $this withNames($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class ListApplications extends Rpc
+{
+}
+
+/**
  * @method string getExecutionId()
  * @method $this withExecutionId($value)
  * @method string getLogType()
@@ -430,6 +646,8 @@ class ListExecutionRiskyTasks extends Rpc
  * @method $this withMode($value)
  * @method string getExecutionId()
  * @method $this withExecutionId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getRamRole()
  * @method $this withRamRole($value)
  * @method string getNextToken()
@@ -474,6 +692,8 @@ class ListExecutions extends Rpc
  * @method $this withNextToken($value)
  * @method string getMaxResults()
  * @method $this withMaxResults($value)
+ * @method string getPatchStatuses()
+ * @method $this withPatchStatuses($value)
  */
 class ListInstancePatches extends Rpc
 {
@@ -488,20 +708,6 @@ class ListInstancePatches extends Rpc
  * @method $this withMaxResults($value)
  */
 class ListInstancePatchStates extends Rpc
-{
-}
-
-/**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getNextToken()
- * @method $this withNextToken($value)
- * @method string getMaxResults()
- * @method $this withMaxResults($value)
- * @method string getStateConfigurationId()
- * @method $this withStateConfigurationId($value)
- */
-class ListInstanceStateReports extends Rpc
 {
 }
 
@@ -544,12 +750,52 @@ class ListInventoryEntries extends Rpc
 }
 
 /**
+ * @method string getResourceTags()
+ * @method $this withResourceTags($value)
+ * @method string getTags()
+ * @method $this withTags($value)
+ * @method array getFilter()
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class ListOpsItems extends Rpc
+{
+
+    /**
+     * @param array $filter
+     *
+     * @return $this
+     */
+	public function withFilter(array $filter)
+	{
+	    $this->data['Filter'] = $filter;
+		foreach ($filter as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Name'])){
+				$this->options['query']['Filter.' . ($depth1 + 1) . '.Name'] = $depth1Value['Name'];
+			}
+			foreach ($depth1Value['Value'] as $i => $iValue) {
+				$this->options['query']['Filter.' . ($depth1 + 1) . '.Value.' . ($i + 1)] = $iValue;
+			}
+			if(isset($depth1Value['Operator'])){
+				$this->options['query']['Filter.' . ($depth1 + 1) . '.Operator'] = $depth1Value['Operator'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getType()
  * @method $this withType($value)
  * @method string getRecursive()
  * @method $this withRecursive($value)
  * @method string getPath()
  * @method $this withPath($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getNextToken()
  * @method $this withNextToken($value)
  * @method string getSortOrder()
@@ -612,18 +858,20 @@ class ListResourceExecutionStatus extends Rpc
 /**
  * @method string getRecursive()
  * @method $this withRecursive($value)
- * @method string getTags()
- * @method $this withTags($value)
  * @method string getPath()
  * @method $this withPath($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getNextToken()
  * @method $this withNextToken($value)
+ * @method string getSortOrder()
+ * @method $this withSortOrder($value)
+ * @method string getTags()
+ * @method $this withTags($value)
  * @method string getName()
  * @method $this withName($value)
  * @method string getMaxResults()
  * @method $this withMaxResults($value)
- * @method string getSortOrder()
- * @method $this withSortOrder($value)
  * @method string getSortField()
  * @method $this withSortField($value)
  */
@@ -652,6 +900,8 @@ class ListSecretParameterVersions extends Rpc
  * @method $this withStateConfigurationIds($value)
  * @method string getTags()
  * @method $this withTags($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getTemplateVersion()
  * @method $this withTemplateVersion($value)
  * @method string getNextToken()
@@ -742,6 +992,8 @@ class ListTaskExecutions extends Rpc
 }
 
 /**
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getCreatedDateBefore()
  * @method $this withCreatedDateBefore($value)
  * @method string getCreatedBy()
@@ -874,6 +1126,8 @@ class SearchInventory extends Rpc
 /**
  * @method string getDeliverySlsEnabled()
  * @method $this withDeliverySlsEnabled($value)
+ * @method string getRdcEnterpriseId()
+ * @method $this withRdcEnterpriseId($value)
  * @method string getDeliveryOssKeyPrefix()
  * @method $this withDeliveryOssKeyPrefix($value)
  * @method string getDeliveryOssEnabled()
@@ -892,8 +1146,12 @@ class SetServiceSettings extends Rpc
  * @method $this withClientToken($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getTemplateURL()
+ * @method $this withTemplateURL($value)
  * @method string getMode()
  * @method $this withMode($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getTemplateVersion()
  * @method $this withTemplateVersion($value)
  * @method string getTemplateName()
@@ -956,6 +1214,30 @@ class UntagResources extends Rpc
 }
 
 /**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getTags()
+ * @method $this withTags($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class UpdateApplication extends Rpc
+{
+}
+
+/**
+ * @method string getNewName()
+ * @method $this withNewName($value)
+ * @method string getApplicationName()
+ * @method $this withApplicationName($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class UpdateApplicationGroup extends Rpc
+{
+}
+
+/**
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getExecutionId()
@@ -968,24 +1250,36 @@ class UpdateExecution extends Rpc
 }
 
 /**
- * @method string getAgentVersion()
- * @method $this withAgentVersion($value)
- * @method string getIpAddress()
- * @method $this withIpAddress($value)
- * @method string getComputerName()
- * @method $this withComputerName($value)
- * @method string getPlatformName()
- * @method $this withPlatformName($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getAgentName()
- * @method $this withAgentName($value)
- * @method string getPlatformType()
- * @method $this withPlatformType($value)
- * @method string getPlatformVersion()
- * @method $this withPlatformVersion($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getSource()
+ * @method $this withSource($value)
+ * @method string getTitle()
+ * @method $this withTitle($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getSeverity()
+ * @method $this withSeverity($value)
+ * @method string getSolutions()
+ * @method $this withSolutions($value)
+ * @method string getResources()
+ * @method $this withResources($value)
+ * @method string getPriority()
+ * @method $this withPriority($value)
+ * @method string getDedupString()
+ * @method $this withDedupString($value)
+ * @method string getTags()
+ * @method $this withTags($value)
+ * @method string getOpsItemId()
+ * @method $this withOpsItemId($value)
+ * @method string getCategory()
+ * @method $this withCategory($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
  */
-class UpdateInstanceInformation extends Rpc
+class UpdateOpsItem extends Rpc
 {
 }
 
@@ -994,6 +1288,8 @@ class UpdateInstanceInformation extends Rpc
  * @method $this withDescription($value)
  * @method string getTags()
  * @method $this withTags($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getName()
  * @method $this withName($value)
  * @method string getValue()
@@ -1022,6 +1318,8 @@ class UpdatePatchBaseline extends Rpc
  * @method $this withDescription($value)
  * @method string getTags()
  * @method $this withTags($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getName()
  * @method $this withName($value)
  * @method string getValue()
@@ -1040,6 +1338,8 @@ class UpdateSecretParameter extends Rpc
  * @method $this withDescription($value)
  * @method string getTargets()
  * @method $this withTargets($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getScheduleExpression()
  * @method $this withScheduleExpression($value)
  * @method string getConfigureMode()
@@ -1060,6 +1360,8 @@ class UpdateStateConfiguration extends Rpc
  * @method $this withContent($value)
  * @method string getTags()
  * @method $this withTags($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getTemplateName()
  * @method $this withTemplateName($value)
  * @method string getVersionName()
@@ -1072,6 +1374,8 @@ class UpdateTemplate extends Rpc
 /**
  * @method string getContent()
  * @method $this withContent($value)
+ * @method string getTemplateURL()
+ * @method $this withTemplateURL($value)
  */
 class ValidateTemplateContent extends Rpc
 {

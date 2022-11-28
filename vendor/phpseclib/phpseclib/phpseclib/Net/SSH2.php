@@ -58,8 +58,10 @@ use phpseclib\Crypt\Rijndael;
 use phpseclib\Crypt\RSA;
 use phpseclib\Crypt\TripleDES;
 use phpseclib\Crypt\Twofish;
-use phpseclib\Math\BigInteger; // Used to do Diffie-Hellman key exchange and DSA/RSA signature verification.
+use phpseclib\Math\BigInteger;
 use phpseclib\System\SSH\Agent;
+
+// Used to do Diffie-Hellman key exchange and DSA/RSA signature verification.
 
 /**
  * Pure-PHP implementation of SSHv2.
@@ -3519,7 +3521,11 @@ class SSH2
 
         if (!is_resource($this->fsock) || feof($this->fsock)) {
             $this->bitmap = 0;
-            user_error('Connection closed (by server) prematurely ' . $elapsed . 's');
+            $str = 'Connection closed (by server) prematurely';
+            if (isset($elapsed)) {
+                $str.= ' ' . $elapsed . 's';
+            }
+            user_error($str);
             return false;
         }
 

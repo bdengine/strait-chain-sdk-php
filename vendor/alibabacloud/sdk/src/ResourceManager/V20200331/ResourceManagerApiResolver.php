@@ -12,6 +12,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CancelCreateCloudAccount cancelCreateCloudAccount(array $options = [])
  * @method CancelHandshake cancelHandshake(array $options = [])
  * @method CancelPromoteResourceAccount cancelPromoteResourceAccount(array $options = [])
+ * @method CheckAccountDelete checkAccountDelete(array $options = [])
  * @method CreateCloudAccount createCloudAccount(array $options = [])
  * @method CreateControlPolicy createControlPolicy(array $options = [])
  * @method CreateFolder createFolder(array $options = [])
@@ -22,6 +23,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateRole createRole(array $options = [])
  * @method CreateServiceLinkedRole createServiceLinkedRole(array $options = [])
  * @method DeclineHandshake declineHandshake(array $options = [])
+ * @method DeleteAccount deleteAccount(array $options = [])
  * @method DeleteControlPolicy deleteControlPolicy(array $options = [])
  * @method DeleteFolder deleteFolder(array $options = [])
  * @method DeletePolicy deletePolicy(array $options = [])
@@ -37,6 +39,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method EnableControlPolicy enableControlPolicy(array $options = [])
  * @method EnableResourceDirectory enableResourceDirectory(array $options = [])
  * @method GetAccount getAccount(array $options = [])
+ * @method GetAccountDeletionCheckResult getAccountDeletionCheckResult(array $options = [])
+ * @method GetAccountDeletionStatus getAccountDeletionStatus(array $options = [])
  * @method GetControlPolicy getControlPolicy(array $options = [])
  * @method GetControlPolicyEnablementStatus getControlPolicyEnablementStatus(array $options = [])
  * @method GetFolder getFolder(array $options = [])
@@ -46,6 +50,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetPolicyVersion getPolicyVersion(array $options = [])
  * @method GetResourceDirectory getResourceDirectory(array $options = [])
  * @method GetResourceGroup getResourceGroup(array $options = [])
+ * @method GetResourceGroupListAclMode getResourceGroupListAclMode(array $options = [])
  * @method GetRole getRole(array $options = [])
  * @method GetServiceLinkedRoleDeletionStatus getServiceLinkedRoleDeletionStatus(array $options = [])
  * @method InitResourceDirectory initResourceDirectory(array $options = [])
@@ -66,6 +71,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListResourceGroups listResourceGroups(array $options = [])
  * @method ListResources listResources(array $options = [])
  * @method ListRoles listRoles(array $options = [])
+ * @method ListTagKeys listTagKeys(array $options = [])
+ * @method ListTagResources listTagResources(array $options = [])
+ * @method ListTagValues listTagValues(array $options = [])
  * @method ListTargetAttachmentsForControlPolicy listTargetAttachmentsForControlPolicy(array $options = [])
  * @method ListTrustedServiceStatus listTrustedServiceStatus(array $options = [])
  * @method MoveAccount moveAccount(array $options = [])
@@ -78,6 +86,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SendVerificationCodeForBindSecureMobilePhone sendVerificationCodeForBindSecureMobilePhone(array $options = [])
  * @method SendVerificationCodeForEnableRD sendVerificationCodeForEnableRD(array $options = [])
  * @method SetDefaultPolicyVersion setDefaultPolicyVersion(array $options = [])
+ * @method SetMemberDeletionPermission setMemberDeletionPermission(array $options = [])
+ * @method TagResources tagResources(array $options = [])
+ * @method UntagResources untagResources(array $options = [])
  * @method UpdateAccount updateAccount(array $options = [])
  * @method UpdateControlPolicy updateControlPolicy(array $options = [])
  * @method UpdateFolder updateFolder(array $options = [])
@@ -174,6 +185,14 @@ class CancelPromoteResourceAccount extends Rpc
 }
 
 /**
+ * @method string getAccountId()
+ * @method $this withAccountId($value)
+ */
+class CheckAccountDelete extends Rpc
+{
+}
+
+/**
  * @method string getParentFolderId()
  * @method $this withParentFolderId($value)
  * @method string getDisplayName()
@@ -242,6 +261,8 @@ class CreatePolicyVersion extends Rpc
  * @method $this withParentFolderId($value)
  * @method string getDisplayName()
  * @method $this withDisplayName($value)
+ * @method string getTag()
+ * @method $this withTag($value)
  * @method string getPayerAccountId()
  * @method $this withPayerAccountId($value)
  */
@@ -290,6 +311,16 @@ class CreateServiceLinkedRole extends Rpc
  * @method $this withHandshakeId($value)
  */
 class DeclineHandshake extends Rpc
+{
+}
+
+/**
+ * @method string getAbandonableCheckId()
+ * @method $this withAbandonableCheckId($value)
+ * @method string getAccountId()
+ * @method $this withAccountId($value)
+ */
+class DeleteAccount extends Rpc
 {
 }
 
@@ -422,8 +453,26 @@ class EnableResourceDirectory extends Rpc
 /**
  * @method string getAccountId()
  * @method $this withAccountId($value)
+ * @method string getIncludeTags()
+ * @method $this withIncludeTags($value)
  */
 class GetAccount extends Rpc
+{
+}
+
+/**
+ * @method string getAccountId()
+ * @method $this withAccountId($value)
+ */
+class GetAccountDeletionCheckResult extends Rpc
+{
+}
+
+/**
+ * @method string getAccountId()
+ * @method $this withAccountId($value)
+ */
+class GetAccountDeletionStatus extends Rpc
 {
 }
 
@@ -496,9 +545,21 @@ class GetResourceDirectory extends Rpc
 /**
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
+ * @method string getIncludeTags()
+ * @method $this withIncludeTags($value)
  */
 class GetResourceGroup extends Rpc
 {
+}
+
+class GetResourceGroupListAclMode extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'http';
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -531,6 +592,8 @@ class InitResourceDirectory extends Rpc
  * @method $this withNote($value)
  * @method string getTargetType()
  * @method $this withTargetType($value)
+ * @method string getTag()
+ * @method $this withTag($value)
  * @method string getTargetEntity()
  * @method $this withTargetEntity($value)
  */
@@ -541,8 +604,12 @@ class InviteAccountToResourceDirectory extends Rpc
 /**
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getIncludeTags()
+ * @method $this withIncludeTags($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getTag()
+ * @method $this withTag($value)
  */
 class ListAccounts extends Rpc
 {
@@ -555,8 +622,12 @@ class ListAccounts extends Rpc
  * @method $this withPageNumber($value)
  * @method string getParentFolderId()
  * @method $this withParentFolderId($value)
+ * @method string getIncludeTags()
+ * @method $this withIncludeTags($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getTag()
+ * @method $this withTag($value)
  */
 class ListAccountsForParent extends Rpc
 {
@@ -707,6 +778,12 @@ class ListPolicyVersions extends Rpc
  * @method $this withResourceGroupId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getTag()
+ * @method $this withTag($value)
+ * @method string getResourceGroupIds()
+ * @method $this withResourceGroupIds($value)
+ * @method string getIncludeTags()
+ * @method $this withIncludeTags($value)
  * @method string getDisplayName()
  * @method $this withDisplayName($value)
  * @method string getName()
@@ -749,6 +826,52 @@ class ListResources extends Rpc
  * @method $this withPageSize($value)
  */
 class ListRoles extends Rpc
+{
+}
+
+/**
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ * @method string getKeyFilter()
+ * @method $this withKeyFilter($value)
+ */
+class ListTagKeys extends Rpc
+{
+}
+
+/**
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ * @method string getTag()
+ * @method $this withTag($value)
+ */
+class ListTagResources extends Rpc
+{
+}
+
+/**
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getValueFilter()
+ * @method $this withValueFilter($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ * @method string getTagKey()
+ * @method $this withTagKey($value)
+ */
+class ListTagValues extends Rpc
 {
 }
 
@@ -871,6 +994,40 @@ class SendVerificationCodeForEnableRD extends Rpc
  * @method $this withPolicyName($value)
  */
 class SetDefaultPolicyVersion extends Rpc
+{
+}
+
+/**
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class SetMemberDeletionPermission extends Rpc
+{
+}
+
+/**
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getTag()
+ * @method $this withTag($value)
+ */
+class TagResources extends Rpc
+{
+}
+
+/**
+ * @method string getAll()
+ * @method $this withAll($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getTagKey()
+ * @method $this withTagKey($value)
+ */
+class UntagResources extends Rpc
 {
 }
 

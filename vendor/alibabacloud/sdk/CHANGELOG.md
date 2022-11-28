@@ -1,5 +1,740 @@
 # CHANGELOG
 
+## 1.8.1571 - 2022-11-25
+- SubmitTextTo2DAvatarVideoTask add new params.
+
+
+## 1.8.1570 - 2022-11-25
+- Release CustomizeClassifyImage.
+
+
+## 1.8.1569 - 2022-11-24
+- Support deleteCertificate.
+
+
+## 1.8.1568 - 2022-11-24
+- Release CustomizeClassifyImage.
+
+
+## 1.8.1567 - 2022-11-23
+- Supported GetDataCronClearConfig,GetDataCorrectRollbackFile,GetOrderAttachmentFile API.
+
+
+## 1.8.1566 - 2022-11-22
+- Add OpenAPI GetInstanceMetrics.
+- OpenAPI DescribeEais Add return parameter StartTime.
+
+
+## 1.8.1565 - 2022-11-22
+- Support More Open Api.
+
+
+## 1.8.1564 - 2022-11-21
+- RunasUserPassword is not required in CreateJobFile.
+- RunasUserPassword not required in SubmitJob.
+- Add new api GetJobLog.
+
+
+## 1.8.1563 - 2022-11-18
+- Update RefineMask.
+
+
+## 1.8.1562 - 2022-11-17
+- Update DescribeRDDomainConfig.
+
+
+## 1.8.1561 - 2022-11-17
+- Add DescribeRDDomainConfig.
+
+
+## 1.8.1560 - 2022-11-17
+- Update BatchDescribeCdnIpInfo.
+
+
+## 1.8.1559 - 2022-11-17
+- Add DescribeRDDomainConfig.
+
+
+## 1.8.1558 - 2022-11-17
+- Support GetCertWarehouseQuota.
+
+
+## 1.8.1557 - 2022-11-16
+- Publish Swift.
+
+
+## 1.8.1556 - 2022-11-16
+- Add ImportOAS.
+
+
+## 1.8.1555 - 2022-11-16
+- RunasUserPassword is not required in CreateJobFile.
+- RunasUserPassword not required in SubmitJob.
+- Add new api GetJobLog.
+
+
+## 1.8.1554 - 2022-11-15
+- Add renew and modify instance pay type api.
+
+
+## 1.8.1553 - 2022-11-11
+- Update sdk version.
+
+
+## 1.8.1552 - 2022-11-11
+- Release EstimateMonocularVideoDepth.
+
+
+## 1.8.1551 - 2022-11-11
+- Release CustomizeClassifyImage.
+
+
+## 1.8.1550 - 2022-11-10
+- Update imageaudit.
+
+
+## 1.8.1549 - 2022-11-10
+- Release MergeVideoModelFace.
+
+
+## 1.8.1548 - 2022-11-10
+- Update TaggingAdImage.
+
+
+## 1.8.1547 - 2022-11-10
+- Publish Swift.
+
+
+## 1.8.1546 - 2022-11-10
+- Release RecognizeVATInvoice.
+
+
+## 1.8.1545 - 2022-11-9
+- Release EstimateMonocularVideoDepth.
+
+
+## 1.8.1544 - 2022-11-9
+- Release CustomizeClassifyImage.
+
+
+## 1.8.1543 - 2022-11-7
+- Support encrypt and decrypt.
+
+
+## 1.8.1542 - 2022-11-7
+- Update StartExecution add Parameter TemplateURL.
+   Update StartExecution Parameter TemplateName to optional.
+   Update ValidateTemplateContent add Parameter TemplateURL.
+   Update ValidateTemplateContent Parameter TemplateConten to optional.
+
+
+## 1.8.1541 - 2022-11-7
+- Cc5g.
+
+
+## 1.8.1540 - 2022-11-4
+- Release ScreenEC.
+
+
+## 1.8.1539 - 2022-11-3
+- Support encrypt and decrypt.
+
+
+## 1.8.1538 - 2022-11-2
+- ListJobs return JobType and XAttrs.
+- GetJobInfo return JobType and XAttrs.
+
+
+## 1.8.1537 - 2022-11-1
+- Update RefineMask.
+
+
+## 1.8.1536 - 2022-10-31
+- Live pre sdk test.
+
+
+## 1.8.1535 - 2022-10-28
+- Support BuyPayAsYouGoOrder, RefundPayAsYouGoOrder, ListEffectiveOrders, ListClassificationTemplates.
+- Modify RegisterInstance, UpdateInstance, ListInstances, GetInstance, GetApprovalDetail.
+
+
+## 1.8.1534 - 2022-10-28
+- Support Latest APIs.
+
+
+## 1.8.1533 - 2022-10-27
+- Add BatchDescribeCdnIpInfo.
+
+
+## 1.8.1532 - 2022-10-27
+- Update BatchAddDcdnDomain,add error code.
+
+
+## 1.8.1531 - 2022-10-27
+- Iot_20180120 Old sdk.
+
+
+## 1.8.1530 - 2022-10-27
+- Add DescribeWildcardDomainDetailData.
+
+
+## 1.8.1529 - 2022-10-27
+- ListNodesByQueue and ListJobsWithFilters add Async.
+
+
+## 1.8.1528 - 2022-10-27
+- Modify DescribeVodUserDomains api.
+- Modify CreateUploadImage api.
+
+
+## 1.8.1527 - 2022-10-25
+- OpenAPI CreateEaiJupyter add optional parameter `EnvironmentVar`.
+
+
+## 1.8.1526 - 2022-10-20
+- Support Service of number analysis.
+
+
+## 1.8.1525 - 2022-10-19
+- Update by SDK platform.
+
+
+## 1.8.1524 - 2022-10-19
+- Supported more language for resourcemanager.
+
+
+## 1.8.1523 - 2022-10-19
+- Update Lindorm OpenAPI.
+
+
+## 1.8.1522 - 2022-10-18
+- Update MakeSuperResolutionImage.
+
+
+## 1.8.1521 - 2022-10-17
+- Update RefineMask.
+
+
+## 1.8.1520 - 2022-10-17
+- Update TaggingAdImage.
+
+
+## 1.8.1519 - 2022-10-17
+- Release MergeVideoModelFace.
+
+
+## 1.8.1518 - 2022-10-17
+- Release EstimateMonocularVideoDepth.
+
+
+## 1.8.1517 - 2022-10-17
+- Release RecognizeVATInvoice.
+
+
+## 1.8.1516 - 2022-10-17
+- Update DetectVehicleICongestion DetectVehicleIllegalParking.
+
+
+## 1.8.1515 - 2022-10-17
+- Update videoseg.
+
+
+## 1.8.1514 - 2022-10-17
+- Release ScreenEC.
+
+
+## 1.8.1513 - 2022-10-17
+- Update RecognizeVideoCastCrewList.
+
+
+## 1.8.1512 - 2022-10-14
+- Add GPUMemorySize to DescribeInstanceTypes api.
+
+
+## 1.8.1511 - 2022-10-14
+- Release RecognizeVATInvoice.
+
+
+## 1.8.1510 - 2022-10-13
+- Support DescribeAICImages.
+
+
+## 1.8.1509 - 2022-10-13
+- Supported AndroidNotificationGroup for Push and MassPush.
+- Add Honor channel support.
+
+
+## 1.8.1508 - 2022-10-13
+- Generated 2020-05-18 for `dataworks-public`.
+
+
+## 1.8.1507 - 2022-10-13
+- Supported AnchorId for CreateUnionTask.
+
+
+## 1.8.1506 - 2022-10-10
+- Add OpenAPI CreateEaiJupyter.
+- Fixd bugs for OpenAPI  DeleteEaiAll.
+
+
+## 1.8.1505 - 2022-10-8
+- Update by SDK platform.
+
+
+## 1.8.1504 - 2022-9-29
+- Update MakeSuperResolutionImage.
+
+
+## 1.8.1503 - 2022-9-29
+- Release MergeVideoModelFace.
+
+
+## 1.8.1502 - 2022-9-29
+- Update RefineMask.
+
+
+## 1.8.1501 - 2022-9-29
+- Update CompareFace.
+
+
+## 1.8.1500 - 2022-9-29
+- Update DetectVehicleICongestion DetectVehicleIllegalParking.
+
+
+## 1.8.1499 - 2022-9-29
+- Update RecognizeVideoCastCrewList.
+
+
+## 1.8.1498 - 2022-9-29
+- Update Job Support Incremental Updating.
+
+
+## 1.8.1497 - 2022-9-28
+- Change RefreshAssets Public.
+
+
+## 1.8.1496 - 2022-9-27
+- Create Job Support XAttrs.
+
+
+## 1.8.1495 - 2022-9-27
+- Update by SDK platform.
+
+
+## 1.8.1494 - 2022-9-23
+- Supprt for CreateUnionTask.
+
+
+## 1.8.1493 - 2022-9-23
+- Support ipv4-network.
+
+
+## 1.8.1492 - 2022-9-22
+- Release EstimateMonocularVideoDepth.
+
+
+## 1.8.1491 - 2022-9-22
+- Release CustomizeClassifyImage.
+
+
+## 1.8.1490 - 2022-9-21
+- Generated 2016-11-01 for `live`.
+
+
+## 1.8.1489 - 2022-9-21
+- Automatically generate sdk tasks.
+
+
+## 1.8.1488 - 2022-9-21
+- Release ScreenEC.
+
+
+## 1.8.1487 - 2022-9-20
+- Remove useless Agent parameters.
+
+
+## 1.8.1486 - 2022-9-19
+- Release CustomizeClassifyImage.
+
+
+## 1.8.1485 - 2022-9-19
+- Release EstimateMonocularVideoDepth.
+
+
+## 1.8.1484 - 2022-9-19
+- Change RefreshAssets Public.
+
+
+## 1.8.1483 - 2022-9-16
+- Add location endpoint.
+
+
+## 1.8.1482 - 2022-9-16
+- Init amp.
+
+
+## 1.8.1481 - 2022-9-16
+- Init amp.
+
+
+## 1.8.1480 - 2022-9-16
+- Init amp.
+
+
+## 1.8.1479 - 2022-9-16
+- Update DescribeDcdnReport.
+
+
+## 1.8.1478 - 2022-9-16
+- Update DescribeCdnReport.
+
+
+## 1.8.1477 - 2022-9-16
+- Iot_20180120 old version sdk.
+
+
+## 1.8.1476 - 2022-9-15
+- Generated 2016-11-01 for `live`.
+
+
+## 1.8.1475 - 2022-9-15
+- Generated 2016-11-01 for `live`.
+
+
+## 1.8.1474 - 2022-9-14
+- Add spInstanceId and spInstanceType for api OnsInstanceBaseInfo.
+
+
+## 1.8.1473 - 2022-9-14
+- Generated 2017-07-14 for `EHPC`.
+
+
+## 1.8.1472 - 2022-9-13
+- Update DescribeDcdnL2Vips.
+
+
+## 1.8.1471 - 2022-9-8
+- Add API BatchAddFeishuUsers.
+
+
+## 1.8.1470 - 2022-9-8
+- Update API Error Code And Some Parameters Checks.
+- Update API CreateTicket QPS.
+
+
+## 1.8.1469 - 2022-9-8
+- Change RefreshAssets Public.
+
+
+## 1.8.1468 - 2022-9-8
+- Change RefreshAssets Public.
+
+
+## 1.8.1467 - 2022-9-7
+- SmartSales-OpenAPI.
+
+
+## 1.8.1466 - 2022-9-7
+- Support attribute filtering for DescribeInstanceTypes.
+- Provide cpuArchitecture and insatnceCategory attribute in DescribeInstanceTypes.
+
+
+## 1.8.1465 - 2022-9-6
+- Iot_20180120 old version sdk.
+
+
+## 1.8.1464 - 2022-9-5
+- Update sdk.
+
+
+## 1.8.1463 - 2022-9-5
+- Support STS.
+
+
+## 1.8.1462 - 2022-9-5
+- Support STS.
+
+
+## 1.8.1461 - 2022-9-5
+- Init.
+
+
+## 1.8.1460 - 2022-9-1
+- Add DescribeDcdnL2Vips.
+
+
+## 1.8.1459 - 2022-8-31
+- Support STS.
+
+
+## 1.8.1458 - 2022-8-31
+- Generated 2020-05-18 for `dataworks-public`.
+
+
+## 1.8.1457 - 2022-8-31
+- Support STS.
+
+
+## 1.8.1456 - 2022-8-31
+- Support More Open Api.
+
+
+## 1.8.1455 - 2022-8-31
+- Init.
+
+
+## 1.8.1454 - 2022-8-31
+- Change GetFileDetectResult Public.
+
+
+## 1.8.1453 - 2022-8-31
+- Update ListFpShotFiles and ImAudit.
+
+
+## 1.8.1452 - 2022-8-31
+- Support create image with boot mode.
+- Provide image boot mode info in DescribeImages.
+
+
+## 1.8.1451 - 2022-8-31
+- Add API.
+
+
+## 1.8.1450 - 2022-8-31
+- Supported new features etc.
+
+
+## 1.8.1449 - 2022-8-25
+- Iot_20180120 Old sdk.
+
+
+## 1.8.1448 - 2022-8-25
+- Add kms apis.
+
+
+## 1.8.1447 - 2022-8-25
+- Add kms apis.
+
+
+## 1.8.1446 - 2022-8-24
+- Update ScreenChestCT.
+
+
+## 1.8.1445 - 2022-8-22
+- Fix CreateSyntheticTask api.
+
+
+## 1.8.1444 - 2022-8-22
+- Change GetFileDetectResult Public.
+
+
+## 1.8.1443 - 2022-8-22
+- Automatically generate sdk tasks.
+
+
+## 1.8.1442 - 2022-8-22
+- Automatically generate sdk tasks.
+
+
+## 1.8.1441 - 2022-8-18
+- Supported new features etc.
+
+
+## 1.8.1440 - 2022-8-18
+- Supported new features for outbound.
+
+
+## 1.8.1439 - 2022-8-18
+- Bump version.
+
+
+## 1.8.1438 - 2022-8-16
+- Change GetFileDetectResult Public.
+
+
+## 1.8.1437 - 2022-8-16
+- Generated 2020-05-18 for `dataworks-public`.
+
+
+## 1.8.1436 - 2022-8-16
+- Update Lindorm OpenAPI.
+
+
+## 1.8.1435 - 2022-8-15
+- update Lindorm OpenAPI.
+
+
+## 1.8.1434 - 2022-8-11
+- AMP version.
+
+
+## 1.8.1433 - 2022-8-11
+- Fix ListManagedRules bugs.
+
+
+## 1.8.1432 - 2022-8-11
+- Generated 2020-05-18 for `dataworks-public`.
+
+
+## 1.8.1431 - 2022-8-9
+- Support API ARMInstance.
+- Support Control ARM API.
+
+
+## 1.8.1430 - 2022-8-8
+- ListOrderConsumeStatisticRecords add AliOrderCode.
+
+
+## 1.8.1429 - 2022-8-5
+- Automatically generate sdk tasks.
+
+
+## 1.8.1428 - 2022-8-3
+- Supported more query conditions when searching resource group.
+
+
+## 1.8.1427 - 2022-8-1
+- Update CreateKey and CreateSecret.
+
+
+## 1.8.1426 - 2022-7-29
+- AMP version.
+
+
+## 1.8.1425 - 2022-7-29
+- Change ListCheckInstanceResult Public.
+
+
+## 1.8.1424 - 2022-7-29
+- AMP version.
+
+
+## 1.8.1423 - 2022-7-29
+- AMP version.
+
+
+## 1.8.1422 - 2022-7-28
+- Fix bug.
+
+
+## 1.8.1421 - 2022-7-28
+- Automatically generate sdk tasks.
+
+
+## 1.8.1420 - 2022-7-28
+- Add GetImageInfos api.
+
+
+## 1.8.1419 - 2022-7-27
+- Support ListProxies API to return protocolType, protocolPort and remove mysqlPort.
+- Support GetProxy API to return protocolType, protocolPort and remove mysqlPort.
+
+
+## 1.8.1418 - 2022-7-27
+ - Update.
+
+
+## 1.8.1417 - 2022-7-26
+- Support Service of number analysis.
+
+
+## 1.8.1416 - 2022-7-26
+- Change ListCheckInstanceResult Public.
+
+
+## 1.8.1415 - 2022-7-26
+- Support API ARMInstance.
+- Support Control ARM API.
+
+
+## 1.8.1414 - 2022-7-26
+- Change ListCheckInstanceResult Public.
+
+
+## 1.8.1413 - 2022-7-25
+- Change ListCheckInstanceResult GetCheckDetail Public.
+
+
+## 1.8.1412 - 2022-7-25
+- Update MonitorExamination.
+
+
+## 1.8.1411 - 2022-7-25
+- Update SegmentOAR.
+
+
+## 1.8.1410 - 2022-7-25
+- Change ListCheckInstanceResult GetCheckDetail Public.
+
+
+## 1.8.1409 - 2022-7-22
+- Change ListCheckInstanceResult GetCheckDetail Public.
+
+
+## 1.8.1408 - 2022-7-22
+- Update ScreenChestCT  Release SegmentOAR.
+
+
+## 1.8.1407 - 2022-7-22
+- Update ScreenChestCT - Release SegmentOAR.
+
+
+## 1.8.1406 - 2022-7-21
+- Support PreConfigRule.
+
+
+## 1.8.1405 - 2022-7-21
+- Add kms apis.
+
+
+## 1.8.1404 - 2022-7-21
+- Ram action config.
+
+
+## 1.8.1403 - 2022-7-21
+- Add Body Detection and Image Splicing API.
+
+
+## 1.8.1402 - 2022-7-20
+- Change getFileDetectResult.
+
+
+## 1.8.1401 - 2022-7-20
+- Support AK Audit API.
+
+
+## 1.8.1400 - 2022-7-20
+- Add Body Detection and Image Splicing API.
+
+
+## 1.8.1399 - 2022-7-20
+- Generated 2020-05-18 for `dataworks-public`.
+
+
+## 1.8.1398 - 2022-7-18
+- Change cspm ListCheckResult api.
+
+
+## 1.8.1397 - 2022-7-18
+- Support Elastic Desktop Service.
+
+
+## 1.8.1396 - 2022-7-18
+- Test.
+
+
+## 1.8.1395 - 2022-7-15
+- Add cspm ListCheckResult api.
+
+
+## 1.8.1394 - 2022-7-15
+- Add open file detect api.
+
+
+## 1.8.1393 - 2022-7-15
+- Support Security Group Batch Manager Rules.
+
+
 ## 1.8.1392 - 2022-7-14
 - Supported version 5.
 

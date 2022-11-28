@@ -22,6 +22,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateUploadAttachedMedia createUploadAttachedMedia(array $options = [])
  * @method CreateUploadImage createUploadImage(array $options = [])
  * @method CreateUploadVideo createUploadVideo(array $options = [])
+ * @method DecryptKMSDataKey decryptKMSDataKey(array $options = [])
  * @method DeleteAIImageInfos deleteAIImageInfos(array $options = [])
  * @method DeleteAITemplate deleteAITemplate(array $options = [])
  * @method DeleteAppInfo deleteAppInfo(array $options = [])
@@ -60,6 +61,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeVodUserDomains describeVodUserDomains(array $options = [])
  * @method DescribeVodVerifyContent describeVodVerifyContent(array $options = [])
  * @method DetachAppPolicyFromIdentity detachAppPolicyFromIdentity(array $options = [])
+ * @method GenerateKMSDataKey generateKMSDataKey(array $options = [])
  * @method GetAIImageJobs getAIImageJobs(array $options = [])
  * @method GetAIMediaAuditJob getAIMediaAuditJob(array $options = [])
  * @method GetAITemplate getAITemplate(array $options = [])
@@ -72,6 +74,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetEditingProject getEditingProject(array $options = [])
  * @method GetEditingProjectMaterials getEditingProjectMaterials(array $options = [])
  * @method GetImageInfo getImageInfo(array $options = [])
+ * @method GetImageInfos getImageInfos(array $options = [])
  * @method GetMediaAuditAudioResultDetail getMediaAuditAudioResultDetail(array $options = [])
  * @method GetMediaAuditResult getMediaAuditResult(array $options = [])
  * @method GetMediaAuditResultDetail getMediaAuditResultDetail(array $options = [])
@@ -464,6 +467,26 @@ class CreateUploadImage extends Rpc
  * @method $this withAppId($value)
  */
 class CreateUploadVideo extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceRealOwnerId()
+ * @method $this withResourceRealOwnerId($value)
+ * @method string getKmsRegionId()
+ * @method $this withKmsRegionId($value)
+ * @method string getCipherText()
+ * @method $this withCipherText($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DecryptKMSDataKey extends Rpc
 {
 }
 
@@ -1009,6 +1032,24 @@ class DetachAppPolicyFromIdentity extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getResourceRealOwnerId()
+ * @method $this withResourceRealOwnerId($value)
+ * @method string getKmsRegionId()
+ * @method $this withKmsRegionId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class GenerateKMSDataKey extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -1163,6 +1204,18 @@ class GetEditingProjectMaterials extends Rpc
  * @method $this withAuthTimeout($value)
  */
 class GetImageInfo extends Rpc
+{
+}
+
+/**
+ * @method string getOutputType()
+ * @method $this withOutputType($value)
+ * @method string getAuthTimeout()
+ * @method $this withAuthTimeout($value)
+ * @method string getImageIds()
+ * @method $this withImageIds($value)
+ */
+class GetImageInfos extends Rpc
 {
 }
 
@@ -1458,10 +1511,12 @@ class ListAITemplate extends Rpc
 /**
  * @method string getResourceRealOwnerId()
  * @method $this withResourceRealOwnerId($value)
- * @method string getPageNo()
- * @method $this withPageNo($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getTag()
+ * @method $this withTag($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
  * @method string getStatus()
  * @method $this withStatus($value)
  */

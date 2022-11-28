@@ -2,17 +2,17 @@
     "packages": [
         {
             "name": "adbario/php-dot-notation",
-            "version": "2.3.0",
-            "version_normalized": "2.3.0.0",
+            "version": "2.4.1",
+            "version_normalized": "2.4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/adbario/php-dot-notation.git",
-                "reference": "39ece8d385ce2f5e03718c693932d83ab0cb5972"
+                "reference": "3bfe67895d26697d20485343499532234eeb7c08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/adbario/php-dot-notation/zipball/39ece8d385ce2f5e03718c693932d83ab0cb5972",
-                "reference": "39ece8d385ce2f5e03718c693932d83ab0cb5972",
+                "url": "https://api.github.com/repos/adbario/php-dot-notation/zipball/3bfe67895d26697d20485343499532234eeb7c08",
+                "reference": "3bfe67895d26697d20485343499532234eeb7c08",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -29,7 +29,7 @@
                 "phpunit/phpunit": "^4.8|^5.7|^6.6|^7.5|^8.5|^9.5",
                 "squizlabs/php_codesniffer": "^3.6"
             },
-            "time": "2022-07-12T02:52:50+00:00",
+            "time": "2022-08-25T19:47:20+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -58,7 +58,7 @@
             ],
             "support": {
                 "issues": "https://github.com/adbario/php-dot-notation/issues",
-                "source": "https://github.com/adbario/php-dot-notation/tree/2.3.0"
+                "source": "https://github.com/adbario/php-dot-notation/tree/2.4.1"
             },
             "install-path": "../adbario/php-dot-notation"
         },
@@ -158,17 +158,17 @@
         },
         {
             "name": "alibabacloud/sdk",
-            "version": "1.8.1392",
-            "version_normalized": "1.8.1392.0",
+            "version": "1.8.1571",
+            "version_normalized": "1.8.1571.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aliyun/openapi-sdk-php.git",
-                "reference": "90b26b8276d325e6930afd9ba4df0dedffcab8ff"
+                "reference": "8376ad09d34c19d71c53f04e28d7fe8a24741073"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aliyun/openapi-sdk-php/zipball/90b26b8276d325e6930afd9ba4df0dedffcab8ff",
-                "reference": "90b26b8276d325e6930afd9ba4df0dedffcab8ff",
+                "url": "https://api.github.com/repos/aliyun/openapi-sdk-php/zipball/8376ad09d34c19d71c53f04e28d7fe8a24741073",
+                "reference": "8376ad09d34c19d71c53f04e28d7fe8a24741073",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -368,7 +368,7 @@
             "suggest": {
                 "ext-sockets": "To use client-side monitoring"
             },
-            "time": "2022-07-14T07:58:13+00:00",
+            "time": "2022-11-25T07:50:40+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -943,17 +943,17 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "7.4.5",
-            "version_normalized": "7.4.5.0",
+            "version": "7.5.0",
+            "version_normalized": "7.5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "1dd98b0564cb3f6bd16ce683cb755f94c10fbd82"
+                "reference": "b50a2a1251152e43f6a37f0fa053e730a67d25ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/1dd98b0564cb3f6bd16ce683cb755f94c10fbd82",
-                "reference": "1dd98b0564cb3f6bd16ce683cb755f94c10fbd82",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/b50a2a1251152e43f6a37f0fa053e730a67d25ba",
+                "reference": "b50a2a1251152e43f6a37f0fa053e730a67d25ba",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -974,10 +974,10 @@
                 "psr/http-client-implementation": "1.0"
             },
             "require-dev": {
-                "bamarni/composer-bin-plugin": "^1.4.1",
+                "bamarni/composer-bin-plugin": "^1.8.1",
                 "ext-curl": "*",
                 "php-http/client-integration-tests": "^3.0",
-                "phpunit/phpunit": "^8.5.5 || ^9.3.5",
+                "phpunit/phpunit": "^8.5.29 || ^9.5.23",
                 "psr/log": "^1.1 || ^2.0 || ^3.0"
             },
             "suggest": {
@@ -985,11 +985,15 @@
                 "ext-intl": "Required for Internationalized Domain Name (IDN) support",
                 "psr/log": "Required for using the Log middleware"
             },
-            "time": "2022-06-20T22:16:13+00:00",
+            "time": "2022-08-28T15:39:27+00:00",
             "type": "library",
             "extra": {
+                "bamarni-bin": {
+                    "bin-links": true,
+                    "forward-command": false
+                },
                 "branch-alias": {
-                    "dev-master": "7.4-dev"
+                    "dev-master": "7.5-dev"
                 }
             },
             "installation-source": "dist",
@@ -1056,7 +1060,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/7.4.5"
+                "source": "https://github.com/guzzle/guzzle/tree/7.5.0"
             },
             "funding": [
                 {
@@ -1076,17 +1080,17 @@
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "1.5.1",
-            "version_normalized": "1.5.1.0",
+            "version": "1.5.2",
+            "version_normalized": "1.5.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "fe752aedc9fd8fcca3fe7ad05d419d32998a06da"
+                "reference": "b94b2807d85443f9719887892882d0329d1e2598"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/fe752aedc9fd8fcca3fe7ad05d419d32998a06da",
-                "reference": "fe752aedc9fd8fcca3fe7ad05d419d32998a06da",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/b94b2807d85443f9719887892882d0329d1e2598",
+                "reference": "b94b2807d85443f9719887892882d0329d1e2598",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1101,7 +1105,7 @@
             "require-dev": {
                 "symfony/phpunit-bridge": "^4.4 || ^5.1"
             },
-            "time": "2021-10-22T20:56:57+00:00",
+            "time": "2022-08-28T14:55:35+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1149,7 +1153,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/promises/issues",
-                "source": "https://github.com/guzzle/promises/tree/1.5.1"
+                "source": "https://github.com/guzzle/promises/tree/1.5.2"
             },
             "funding": [
                 {
@@ -1169,17 +1173,17 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "2.4.0",
-            "version_normalized": "2.4.0.0",
+            "version": "2.4.3",
+            "version_normalized": "2.4.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "13388f00956b1503577598873fffb5ae994b5737"
+                "reference": "67c26b443f348a51926030c83481b85718457d3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/13388f00956b1503577598873fffb5ae994b5737",
-                "reference": "13388f00956b1503577598873fffb5ae994b5737",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/67c26b443f348a51926030c83481b85718457d3d",
+                "reference": "67c26b443f348a51926030c83481b85718457d3d",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1199,16 +1203,20 @@
                 "psr/http-message-implementation": "1.0"
             },
             "require-dev": {
-                "bamarni/composer-bin-plugin": "^1.4.1",
+                "bamarni/composer-bin-plugin": "^1.8.1",
                 "http-interop/http-factory-tests": "^0.9",
-                "phpunit/phpunit": "^8.5.8 || ^9.3.10"
+                "phpunit/phpunit": "^8.5.29 || ^9.5.23"
             },
             "suggest": {
                 "laminas/laminas-httphandlerrunner": "Emit PSR-7 responses"
             },
-            "time": "2022-06-20T21:43:11+00:00",
+            "time": "2022-10-26T14:07:24+00:00",
             "type": "library",
             "extra": {
+                "bamarni-bin": {
+                    "bin-links": true,
+                    "forward-command": false
+                },
                 "branch-alias": {
                     "dev-master": "2.4-dev"
                 }
@@ -1273,7 +1281,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/2.4.0"
+                "source": "https://github.com/guzzle/psr7/tree/2.4.3"
             },
             "funding": [
                 {
@@ -1293,17 +1301,17 @@
         },
         {
             "name": "kornrunner/keccak",
-            "version": "1.1.0",
-            "version_normalized": "1.1.0.0",
+            "version": "1.0.3",
+            "version_normalized": "1.0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kornrunner/php-keccak.git",
-                "reference": "433749d28e117fb97baf9f2631b92b5d9ab3c890"
+                "reference": "ad761f528f4d1e3ce378b8a0841e5f82c9973535"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kornrunner/php-keccak/zipball/433749d28e117fb97baf9f2631b92b5d9ab3c890",
-                "reference": "433749d28e117fb97baf9f2631b92b5d9ab3c890",
+                "url": "https://api.github.com/repos/kornrunner/php-keccak/zipball/ad761f528f4d1e3ce378b8a0841e5f82c9973535",
+                "reference": "ad761f528f4d1e3ce378b8a0841e5f82c9973535",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1313,13 +1321,14 @@
                 ]
             },
             "require": {
-                "php": ">=7.3",
+                "php": ">=7.1.0",
                 "symfony/polyfill-mbstring": "^1.8"
             },
             "require-dev": {
-                "phpunit/phpunit": "^8.2"
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpunit": "~7"
             },
-            "time": "2020-12-07T15:40:44+00:00",
+            "time": "2018-07-30T22:16:23+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -1345,7 +1354,7 @@
             ],
             "support": {
                 "issues": "https://github.com/kornrunner/php-keccak/issues",
-                "source": "https://github.com/kornrunner/php-keccak/tree/1.1.0"
+                "source": "https://github.com/kornrunner/php-keccak/tree/master"
             },
             "install-path": "../kornrunner/keccak"
         },
@@ -1566,17 +1575,17 @@
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "2.0.37",
-            "version_normalized": "2.0.37.0",
+            "version": "2.0.38",
+            "version_normalized": "2.0.38.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "c812fbb4d6b4d7f30235ab7298a12f09ba13b37c"
+                "reference": "b03536539f43a4f9aa33c4f0b2f3a1c752088fcd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/c812fbb4d6b4d7f30235ab7298a12f09ba13b37c",
-                "reference": "c812fbb4d6b4d7f30235ab7298a12f09ba13b37c",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/b03536539f43a4f9aa33c4f0b2f3a1c752088fcd",
+                "reference": "b03536539f43a4f9aa33c4f0b2f3a1c752088fcd",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1597,9 +1606,10 @@
                 "ext-gmp": "Install the GMP (GNU Multiple Precision) extension in order to speed up arbitrary precision integer arithmetic operations.",
                 "ext-libsodium": "SSH2/SFTP can make use of some algorithms provided by the libsodium-php extension.",
                 "ext-mcrypt": "Install the Mcrypt extension in order to speed up a few other cryptographic operations.",
-                "ext-openssl": "Install the OpenSSL extension in order to speed up a wide variety of cryptographic operations."
+                "ext-openssl": "Install the OpenSSL extension in order to speed up a wide variety of cryptographic operations.",
+                "ext-xml": "Install the XML extension to load XML formatted public keys."
             },
-            "time": "2022-04-04T04:57:45+00:00",
+            "time": "2022-09-02T17:04:26+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -1664,7 +1674,7 @@
             ],
             "support": {
                 "issues": "https://github.com/phpseclib/phpseclib/issues",
-                "source": "https://github.com/phpseclib/phpseclib/tree/2.0.37"
+                "source": "https://github.com/phpseclib/phpseclib/tree/2.0.38"
             },
             "funding": [
                 {
@@ -2230,17 +2240,17 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.26.0",
-            "version_normalized": "1.26.0.0",
+            "version": "v1.27.0",
+            "version_normalized": "1.27.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "6fd1b9a79f6e3cf65f9e679b23af304cd9e010d4"
+                "reference": "5bbc823adecdae860bb64756d639ecfec17b050a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/6fd1b9a79f6e3cf65f9e679b23af304cd9e010d4",
-                "reference": "6fd1b9a79f6e3cf65f9e679b23af304cd9e010d4",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/5bbc823adecdae860bb64756d639ecfec17b050a",
+                "reference": "5bbc823adecdae860bb64756d639ecfec17b050a",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2258,11 +2268,11 @@
             "suggest": {
                 "ext-ctype": "For best performance"
             },
-            "time": "2022-05-24T11:49:31+00:00",
+            "time": "2022-11-03T14:55:06+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.26-dev"
+                    "dev-main": "1.27-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -2301,7 +2311,7 @@
                 "portable"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.26.0"
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.27.0"
             },
             "funding": [
                 {
@@ -2321,17 +2331,17 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.26.0",
-            "version_normalized": "1.26.0.0",
+            "version": "v1.27.0",
+            "version_normalized": "1.27.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "9344f9cb97f3b19424af1a21a3b0e75b0a7d8d7e"
+                "reference": "8ad114f6b39e2c98a8b0e3bd907732c207c2b534"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/9344f9cb97f3b19424af1a21a3b0e75b0a7d8d7e",
-                "reference": "9344f9cb97f3b19424af1a21a3b0e75b0a7d8d7e",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/8ad114f6b39e2c98a8b0e3bd907732c207c2b534",
+                "reference": "8ad114f6b39e2c98a8b0e3bd907732c207c2b534",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2349,11 +2359,11 @@
             "suggest": {
                 "ext-mbstring": "For best performance"
             },
-            "time": "2022-05-24T11:49:31+00:00",
+            "time": "2022-11-03T14:55:06+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.26-dev"
+                    "dev-main": "1.27-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -2393,7 +2403,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.26.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.27.0"
             },
             "funding": [
                 {
