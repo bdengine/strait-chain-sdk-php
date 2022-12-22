@@ -121,16 +121,16 @@ class StraitChainClient
 	}
 
 	// 获取transactionCount，即nonce
-	public function scs_getTransactionCount($from,$blockParameter)
+	public function scs_getTransactionCount()
 	{
 
 		# from 即通行证插件账户地址 https://www.straitchain.com/#/down
 		// fromAddress
 //		$arr[0] = "0xc4244f49522c32e6181b759f35be5efa2f19d7f9";
-		$arr[0] = $from;
+		$arr[0] = $this->fromAddress;
 		# "latest", "earliest" 或 "pending"
-//		$arr[1] = "latest";
-		$arr[1] = $blockParameter;
+		$arr[1] = "latest";
+//		$arr[1] = $blockParameter;
 		#
 		$response = $this->request("scs_getTransactionCount", $arr, 1);
 		return $response->result;
