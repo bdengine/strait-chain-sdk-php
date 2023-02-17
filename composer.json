@@ -7,7 +7,8 @@
     "ext-curl": "*",
     "chesterlyd/ethereum-client": "^1.0",
     "ext-openssl": "*",
-    "bitwasp/bitcoin": "^1.0"
+    "bitwasp/bitcoin": "^1.0",
+    "web3p/ethereum-util": "^0.1.4"
   },
   "repositories": {
     "packagist": {

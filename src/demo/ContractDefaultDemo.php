@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	<meta charset="utf-8">
-</head>
-<body>
-
-参数不可以使用对象，参数为空一律填 ""
-http_post_json 会空指针，你们要处理，还有报错的error
-
-
 <?php
 
 use strait_chain\StraitChainClient;
@@ -27,6 +15,7 @@ $fromAddress = "0xc4244f49522c32e6181b759f35be5efa2f19d7f9";
 
 
 $straitClient = new StraitChainClient();
+//$straitClient->setUrl("http://192.168.80.15/strait-chain-client-test/api/develop/straits/action");
 $straitClient->setAppId($appId);
 $straitClient->setAppKey($appKey);
 $straitClient->setPrivateKey($privateKey);
@@ -37,7 +26,7 @@ $straitClient->setFromAddress($fromAddress);
 //	"error":null,
 //	"id":"1",
 //	"jsonrpc":"2.0",
-//	"result":"0xd27dd6519cec69a6ef784b16f2aba8cf0aac88a7cca5eab183bb8f95fb84cf44"
+//	"result":"0x2e73d56a74ad6ec91557b83d9bfdbde41772d615c3efbdc6d515377166f8f81b"
 //}"
 // 第一步，部署合约，返回合约的部署哈希
 //$contractDeployTx = $straitClient->scs_deployContract(10);
@@ -48,10 +37,10 @@ $straitClient->setFromAddress($fromAddress);
 //	"error":null,
 //	"id":"1",
 //	"jsonrpc":"2.0",
-//	"result":"0xc9cfba2fd2af30f9c7bbf0b1208d692ba99c3220"
+//	"result":"0xc7c406622919456d867fff3a4f2c0a490c261b65"
 //}"
 // 第二部，根据部署哈希获得合约地址
-//$contractDeployAddress = $straitClient->scs_contractAddressByHash("0xd27dd6519cec69a6ef784b16f2aba8cf0aac88a7cca5eab183bb8f95fb84cf44");
+//$contractDeployAddress = $straitClient->scs_contractAddressByHash("0x2e73d56a74ad6ec91557b83d9bfdbde41772d615c3efbdc6d515377166f8f81b");
 
 //---------------------------------------------------------------------------------------------------------------------
 
@@ -70,7 +59,7 @@ $straitClient->setFromAddress($fromAddress);
 //    'remark'          => '',
 //    'count'           => '10',
 //    'owner'           => $fromAddress,
-//    'contractAddress' => '0xc9cfba2fd2af30f9c7bbf0b1208d692ba99c3220',
+//    'contractAddress' => '0xc7c406622919456d867fff3a4f2c0a490c261b65',
 //    'collectSn'       => '-1',
 //    'serviceId'       => '',
 //];
@@ -78,7 +67,7 @@ $straitClient->setFromAddress($fromAddress);
 //	"error":null,
 //	"id":"1",
 //	"jsonrpc":"2.0",
-//	"result":"ff48a89e615b4891ad3f7c95beccdf69"
+//	"result":"15f178c20fca449bbf62616d6d2232a8"
 //}"
 //$mintTxHash = $straitClient->scs_nft_mint($mintParam);
 
@@ -91,18 +80,18 @@ $straitClient->setFromAddress($fromAddress);
 //	"jsonrpc":"2.0",
 //	"result":[
 //		{
-//			"hash":"0x5837aec149d5fde18967f795d9489d868d3dd3d01491045d3900c939bcad1d6f",
+//			"hash":"0x46d7398bdc06574015e335e601de8da855572ebb2ff0a3d51737e6f1a62e342d",
 //			"tokenId":1
 //		},
-//      .......
+//		...
 //		{
-//			"hash":"0xd9f2341f8d0538607b4b5ff5f797a5aef6431e2e2a021ac63de012a9ad506ac7",
+//			"hash":"0xcf067c4a32fda4becbb74eb32554426db4246ea9e2159d1895a76c5a95cace57",
 //			"tokenId":10
 //		}
 //	]
-//}"
+//}
 // 第四步，根据铸造交易哈希获取铸造结果
-//$mintDto = $straitClient->scs_getTokenByHash("ff48a89e615b4891ad3f7c95beccdf69");
+//$mintDto = $straitClient->scs_getTokenByHash("15f178c20fca449bbf62616d6d2232a8");
 
 //---------------------------------------------------------------------------------------------------------------------
 
@@ -111,28 +100,24 @@ $straitClient->setFromAddress($fromAddress);
 //	"error":null,
 //	"id":"1",
 //	"jsonrpc":"2.0",
-//	"result":"0x9cb48ffdf07bf17e177419d2a4b160bde102804e027239d6e36abc8b423915ab"
+//	"result":"0x7fb4761213f167f51c67cda5ab799149c9997a05a7c00b568db3e0b148f5bec7"
 //}
 //$toAddress = "0xd4eC9ee5613Ec88fd2C3855b2c837Bd8832b97CF";
 //$param=[
 //    'fromAddress'=>$fromAddress,
 //    'toAddress'=>$toAddress,
-//    'contractAddress'=>"0xc9cfba2fd2af30f9c7bbf0b1208d692ba99c3220",
+//    'contractAddress'=>"0xc7c406622919456d867fff3a4f2c0a490c261b65",
 //    "tokenId"=>1,
 //];
 //$straitClient->transferNft($param);
 
 // 第六步，查询是否成功
-//$response = $straitClient->scs_getTransactionReceipt("0x9cb48ffdf07bf17e177419d2a4b160bde102804e027239d6e36abc8b423915ab");
+//$response = $straitClient->scs_getTransactionReceipt("0x7fb4761213f167f51c67cda5ab799149c9997a05a7c00b568db3e0b148f5bec7");
 //// 0x1成功
 //var_dump($response->result->status);
 
-$param=[
-  "tokenId"=>1,
-  "contractAddress"=>"0xc9cfba2fd2af30f9c7bbf0b1208d692ba99c3220",
-];
-$straitClient->ownerOf($param);
-
-?>
-</body>
-</html>
+//$param=[
+//  "tokenId"=>1,
+//  "contractAddress"=>"0xc9cfba2fd2af30f9c7bbf0b1208d692ba99c3220",
+//];
+//$straitClient->ownerOf($param);

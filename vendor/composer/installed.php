@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => '__root__',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => 'dc81c0ba03964b91fdfc9d2877473afad84f41a8',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'dc81c0ba03964b91fdfc9d2877473afad84f41a8',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -1334,9 +1334,9 @@
             'dev_requirement' => false,
         ),
         'web3p/ethereum-util' => array(
-            'pretty_version' => '0.1.3',
-            'version' => '0.1.3.0',
-            'reference' => '77a860f35028eae57cd7e7a044ab6c11ffe1ad9e',
+            'pretty_version' => '0.1.4',
+            'version' => '0.1.4.0',
+            'reference' => '9a01f5389835d4092d338bb7b7d119017052ca68',
             'type' => 'library',
             'install_path' => __DIR__ . '/../web3p/ethereum-util',
             'aliases' => array(),
