@@ -3,7 +3,7 @@
 
 use strait_chain\StraitChainClient;
 
-require_once __DIR__ . '/strait_chain/StraitChainClient.php';
+require_once __DIR__ . '/../strait_chain/StraitChainClient.php';
 // 这些参数改成你自己的参数
 // 从这里拿https://www.straitchain.com/#/accountCenter/saveSetUp/saveSetUp
 $appId = "Ist8KOqm";
