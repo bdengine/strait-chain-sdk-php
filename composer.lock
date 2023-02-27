@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "95a2fdfc45368f3f78db4786b4478111",
+    "content-hash": "8646a596ca2391623546e07d733036c1",
     "packages": [
         {
             "name": "adbario/php-dot-notation",
@@ -574,6 +574,61 @@
                 "source": "https://github.com/Bit-Wasp/buffertools-php/tree/v0.5.7"
             },
             "time": "2020-01-17T21:31:49+00:00"
+        },
+        {
+            "name": "bitwasp/secp256k1-php",
+            "version": "v0.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Bit-Wasp/secp256k1-php.git",
+                "reference": "a6e8bf322b537da7ad7b91da379f3cd7762845d8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Bit-Wasp/secp256k1-php/zipball/a6e8bf322b537da7ad7b91da379f3cd7762845d8",
+                "reference": "a6e8bf322b537da7ad7b91da379f3cd7762845d8",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": "^7.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Unlicense"
+            ],
+            "authors": [
+                {
+                    "name": "Ruben de Vries",
+                    "email": "ruben@rubensayshi.com"
+                },
+                {
+                    "name": "Thomas Kerin",
+                    "email": "afk11@users.noreply.github.com"
+                }
+            ],
+            "description": "PHP Extension with bindings for bitcoin/secp256k1.",
+            "keywords": [
+                "ECDSA",
+                "bitcoin",
+                "bitwasp",
+                "cryptocurrency",
+                "ecc",
+                "extension",
+                "php",
+                "secp256k1"
+            ],
+            "support": {
+                "issues": "https://github.com/Bit-Wasp/secp256k1-php/issues",
+                "source": "https://github.com/Bit-Wasp/secp256k1-php/tree/v0.2"
+            },
+            "time": "2019-02-26T18:56:43+00:00"
         },
         {
             "name": "chesterlyd/ethereum-client",

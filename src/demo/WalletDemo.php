@@ -1,7 +1,7 @@
 <?php
 // 生成钱包
 
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 use BitWasp\Bitcoin\Crypto\Random\Random;
 use BitWasp\Bitcoin\Key\Factory\HierarchicalKeyFactory;
@@ -9,6 +9,8 @@ use BitWasp\Bitcoin\Mnemonic\Bip39\Bip39Mnemonic;
 use BitWasp\Bitcoin\Mnemonic\Bip39\Bip39SeedGenerator;
 use BitWasp\Bitcoin\Mnemonic\MnemonicFactory;
 use Web3p\EthereumUtil\Util;
+
+// 使用bitwasp库需要安装PHP的gmp扩展，不然会报错Call to undefined function gmp_init()
 
 // Bip39
 $random = new Random();

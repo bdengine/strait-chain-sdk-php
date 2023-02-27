@@ -8,7 +8,9 @@
     "chesterlyd/ethereum-client": "^1.0",
     "ext-openssl": "*",
     "bitwasp/bitcoin": "^1.0",
-    "web3p/ethereum-util": "^0.1.4"
+    "web3p/ethereum-util": "^0.1.4",
+    "bitwasp/bech32": "^0.0.1",
+    "bitwasp/secp256k1-php": "^0.2.2"
   },
   "repositories": {
     "packagist": {
