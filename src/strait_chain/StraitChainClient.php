@@ -15,7 +15,7 @@ class StraitChainClient
 {
 	// 内网测试 20220101
 	// 正式 20180818
-	private int $chainId = 20220101;
+	private int $chainId = 20180818;
 	// 链接地址
 	private string $baseUrl = "https://backend.straitchain.com/webclient/api/develop/straits/action";
 	// 用户标识
