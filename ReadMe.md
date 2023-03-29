@@ -9,6 +9,8 @@
 > 需要安装gmp扩展，用于依赖加解密处理
 > 
 > php 版本7.4
+> 
+> composer 依赖，web3p/ethereum-tx、web3p/ethereum-util、web3p/rlp、web3p/web3.php、chesterlyd/ethereum-client、bitwasp/buffertools、bitwasp/bitcoin、bitwasp/bech32
 
 ## 参数介绍
 ### 链接地址
